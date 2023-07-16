@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"> </script>
+    <title>ACADEMIA</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+
+        #titleA{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 35px;
+            background-color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-top: 15px;
+        }
+        .button {
+            width: 25px;
+            height: 25px;
+            color: #000000;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .numero{
+            color: rgb(0, 0, 0);
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #texto{
+            text-align: center;
+            color: rgb(0, 0, 0);
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 165px; /* altura do contêiner */
+            margin-bottom: 20px;
+        }
+        
+        .box {
+            height: 100px;
+            width: 115px;
+            background-color: white;
+            border-radius: 20px;
+            margin: 5px;
+            margin-top: 10px;
+        }
+        
+        .big-box {
+            background-color: white;
+            height: 50px; /* altura do quadrado grande */
+            width: 355px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="titleA">TREINO B <br> BRAÇOS</h1>
+    </header>
+    <main>        
+        <div class="container1">
+            <div class="big-box">ROSCA DIRETA NO CABO</div>
+            <div class="box">
+                <div id="texto">SÉRIES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber()">-</button>
+                    <div class="numero" id="numero">0</div>
+                    <button class="button" onclick="addNumber()">+</button>
+            </div>
+            </div>
+            <div class="box">
+                <div id="texto">REPETIÇÕES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber1()">-</button>
+                    <div class="numero" id="numero1">0</div>
+                    <button class="button" onclick="addNumber1()">+</button>
+                </div>
+            </div>
+            <div class="box">
+                <div id="texto">PESO (KG)</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber2()">-</button>
+                    <div class="numero" id="numero2">0</div>
+                    <button class="button" onclick="addNumber2()">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="big-box">TRICEPS BARRA NO CABO </div>
+            <div class="box">
+                <div id="texto">SÉRIES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber3()">-</button>
+                    <div class="numero" id="numero3">0</div>
+                    <button class="button" onclick="addNumber3()">+</button>
+            </div>
+            </div>
+            <div class="box">
+                <div id="texto">REPETIÇÕES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber4()">-</button>
+                    <div class="numero" id="numero4">0</div>
+                    <button class="button" onclick="addNumber4()">+</button>
+                </div>
+            </div>
+            <div class="box">
+                <div id="texto">PESO (KG)</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber5()">-</button>
+                    <div class="numero" id="numero5">0</div>
+                    <button class="button" onclick="addNumber5()">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="big-box">TRICEPS CORDA</div>
+            <div class="box">
+                <div id="texto">SÉRIES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber6()">-</button>
+                    <div class="numero" id="numero6">0</div>
+                    <button class="button" onclick="addNumber6()">+</button>
+            </div>
+            </div>
+            <div class="box">
+                <div id="texto">REPETIÇÕES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber7()">-</button>
+                    <div class="numero" id="numero7">0</div>
+                    <button class="button" onclick="addNumber7()">+</button>
+                </div>
+            </div>
+            <div class="box">
+                <div id="texto">PESO (PINOS)</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber8()">-</button>
+                    <div class="numero" id="numero8">0</div>
+                    <button class="button" onclick="addNumber8()">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="big-box">ROSCA ALTERNADA</div>
+            <div class="box">
+                <div id="texto">SÉRIES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber9()">-</button>
+                    <div class="numero" id="numero9">0</div>
+                    <button class="button" onclick="addNumber9()">+</button>
+            </div>
+            </div>
+            <div class="box">
+                <div id="texto">REPETIÇÕES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber10()">-</button>
+                    <div class="numero" id="numero10">0</div>
+                    <button class="button" onclick="addNumber10()">+</button>
+                </div>
+            </div>
+            <div class="box">
+                <div id="texto">PESO (PINOS)</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber11()">-</button>
+                    <div class="numero" id="numero11">0</div>
+                    <button class="button" onclick="addNumber11()">+</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 id="titleA">TREINO B <br> DORSAL</h1>
+        </div>
+        <div class="container1">
+            <div class="big-box">PUXADOR ALTO</div>
+            <div class="box">
+                <div id="texto">SÉRIES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber12()">-</button>
+                    <div class="numero" id="numero12">0</div>
+                    <button class="button" onclick="addNumber12()">+</button>
+            </div>
+            </div>
+            <div class="box">
+                <div id="texto">REPETIÇÕES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber13()">-</button>
+                    <div class="numero" id="numero13">0</div>
+                    <button class="button" onclick="addNumber13()">+</button>
+                </div>
+            </div>
+            <div class="box">
+                <div id="texto">PESO (KG)</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber14()">-</button>
+                    <div class="numero" id="numero14">0</div>
+                    <button class="button" onclick="addNumber14()">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="big-box">PUXADOR BAIXO</div>
+            <div class="box">
+                <div id="texto">SÉRIES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber15()">-</button>
+                    <div class="numero" id="numero15">0</div>
+                    <button class="button" onclick="addNumber15()">+</button>
+            </div>
+            </div>
+            <div class="box">
+                <div id="texto">REPETIÇÕES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber16()">-</button>
+                    <div class="numero" id="numero16">0</div>
+                    <button class="button" onclick="addNumber16()">+</button>
+                </div>
+            </div>
+            <div class="box">
+                <div id="texto">PESO (KG)</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber17()">-</button>
+                    <div class="numero" id="numero17">0</div>
+                    <button class="button" onclick="addNumber17()">+</button>
+                </div>
+            </div>
+        </div>    
+        <div class="container1">
+            <div class="big-box">PUXADOR B. BARRA RETA</div>
+            <div class="box">
+                <div id="texto">SÉRIES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber18()">-</button>
+                    <div class="numero" id="numero18">0</div>
+                    <button class="button" onclick="addNumber18()">+</button>
+            </div>
+            </div>
+            <div class="box">
+                <div id="texto">REPETIÇÕES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber19()">-</button>
+                    <div class="numero" id="numero19">0</div>
+                    <button class="button" onclick="addNumber19()">+</button>
+                </div>
+            </div>
+            <div class="box">
+                <div id="texto">PESO (KG)</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber20()">-</button>
+                    <div class="numero" id="numero20">0</div>
+                    <button class="button" onclick="addNumber20()">+</button>
+                </div>
+            </div>
+        </div>    
+        <div class="container1">
+            <div class="big-box">ENCOLHIMENTO</div>
+            <div class="box">
+                <div id="texto">SÉRIES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber21()">-</button>
+                    <div class="numero" id="numero21">0</div>
+                    <button class="button" onclick="addNumber21()">+</button>
+            </div>
+            </div>
+            <div class="box">
+                <div id="texto">REPETIÇÕES</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber22()">-</button>
+                    <div class="numero" id="numero22">0</div>
+                    <button class="button" onclick="addNumber22()">+</button>
+                </div>
+            </div>
+            <div class="box">
+                <div id="texto">PESO (KG)</div>
+                <div class="container">
+                    <button class="button" onclick="subtractNumber23()">-</button>
+                    <div class="numero" id="numero23">0</div>
+                    <button class="button" onclick="addNumber23()">+</button>
+                </div>
+            </div>
+        </div>    
+    </main>
+    <footer>
+    </footer>
+    <script type="text/javascript">
+        function alterarNumero(elemento, operacao) {
+            var num = parseInt(elemento.innerHTML);
+            if (operacao === '+') {
+                num++;
+            } else {
+                num--;
+            }
+            elemento.innerHTML = num;
+            localStorage.setItem(elemento.id, num);
+            }
+
+            function addNumber() {
+            var numero = document.getElementById('numero');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber() {
+            var numero = document.getElementById('numero');
+            alterarNumero(numero, '-');
+            }
+
+            function addNumber1() {
+            var numero = document.getElementById('numero1');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber1() {
+            var numero = document.getElementById('numero1');
+            alterarNumero(numero, '-');
+            }
+
+            function addNumber2() {
+            var numero = document.getElementById('numero2');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber2() {
+            var numero = document.getElementById('numero2');
+            alterarNumero(numero, '-');
+            }
+            function addNumber3() {
+            var numero = document.getElementById('numero3');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber3() {
+            var numero = document.getElementById('numero3');
+            alterarNumero(numero, '-');
+            }
+            function addNumber4() {
+            var numero = document.getElementById('numero4');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber4() {
+            var numero = document.getElementById('numero4');
+            alterarNumero(numero, '-');
+            }
+            function addNumber5() {
+            var numero = document.getElementById('numero5');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber5() {
+            var numero = document.getElementById('numero5');
+            alterarNumero(numero, '-');
+            }
+            function addNumber6() {
+            var numero = document.getElementById('numero6');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber6() {
+            var numero = document.getElementById('numero6');
+            alterarNumero(numero, '-');
+            }
+            function addNumber7() {
+            var numero = document.getElementById('numero7');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber7() {
+            var numero = document.getElementById('numero7');
+            alterarNumero(numero, '-');
+            }
+            function addNumber8() {
+            var numero = document.getElementById('numero8');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber8() {
+            var numero = document.getElementById('numero8');
+            alterarNumero(numero, '-');
+            }
+            function addNumber9() {
+            var numero = document.getElementById('numero9');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber9() {
+            var numero = document.getElementById('numero9');
+            alterarNumero(numero, '-');
+            }
+            function addNumber10() {
+            var numero = document.getElementById('numero10');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber10() {
+            var numero = document.getElementById('numero10');
+            alterarNumero(numero, '-');
+            }
+
+            function addNumber11() {
+            var numero = document.getElementById('numero11');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber11() {
+            var numero = document.getElementById('numero11');
+            alterarNumero(numero, '-');
+            }
+            
+            function addNumber12() {
+            var numero = document.getElementById('numero12');
+            alterarNumero(numero, '+');
+            }
+            
+            function subtractNumber12() {
+            var numero = document.getElementById('numero12');
+            alterarNumero(numero, '-');
+            }
+            function addNumber13() {
+            var numero = document.getElementById('numero13');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber13() {
+            var numero = document.getElementById('numero13');
+            alterarNumero(numero, '-');
+            }
+            function addNumber14() {
+            var numero = document.getElementById('numero14');
+            alterarNumero(numero, '+');
+            }
+            function subtractNumber14() {
+            var numero = document.getElementById('numero14');
+            alterarNumero(numero, '-');
+            }
+
+            function subtractNumber15() {
+            var numero = document.getElementById('numero15');
+            alterarNumero(numero, '-');
+            }
+            function addNumber15() {
+            var numero = document.getElementById('numero15');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber16() {
+            var numero = document.getElementById('numero16');
+            alterarNumero(numero, '-');
+            }
+            function addNumber16() {
+            var numero = document.getElementById('numero16');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber17() {
+            var numero = document.getElementById('numero17');
+            alterarNumero(numero, '-');
+            }
+            function addNumber17() {
+            var numero = document.getElementById('numero17');
+            alterarNumero(numero, '+');
+            }
+
+           
+            function subtractNumber18() {
+            var numero = document.getElementById('numero18');
+            alterarNumero(numero, '-');
+            }
+            function addNumber18() {
+            var numero = document.getElementById('numero18');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber19() {
+            var numero = document.getElementById('numero19');
+            alterarNumero(numero, '-');
+            }
+            function addNumber19() {
+            var numero = document.getElementById('numero19');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber20() {
+            var numero = document.getElementById('numero20');
+            alterarNumero(numero, '-');
+            }
+            function addNumber20() {
+            var numero = document.getElementById('numero20');
+            alterarNumero(numero, '+');
+            }
+            function subtractNumber21() {
+            var numero = document.getElementById('numero21');
+            alterarNumero(numero, '-');
+            }
+            function addNumber21() {
+            var numero = document.getElementById('numero21');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber22() {
+            var numero = document.getElementById('numero22');
+            alterarNumero(numero, '-');
+            }
+            function addNumber22() {
+            var numero = document.getElementById('numero22');
+            alterarNumero(numero, '+');
+            }
+
+            function subtractNumber23() {
+            var numero = document.getElementById('numero23');
+            alterarNumero(numero, '-');
+            }
+            function addNumber23() {
+            var numero = document.getElementById('numero23');
+            alterarNumero(numero, '+');
+            }
+
+        // carregar os números armazenados no armazenamento local
+        window.onload = function() {
+            var num = localStorage.getItem('numero');
+            if (num !== null) {
+                document.getElementById('numero').innerHTML = num;
+            }
+            var num1 = localStorage.getItem('numero1');
+            if (num1 !== null) {
+                document.getElementById('numero1').innerHTML = num1;
+            }
+            var num2 = localStorage.getItem('numero2');
+            if (num2 !== null) {
+                document.getElementById('numero2').innerHTML = num2;
+            }
+            var num3 = localStorage.getItem('numero3');
+            if (num3 !== null) {
+                document.getElementById('numero3').innerHTML = num3;
+            }
+            var num4 = localStorage.getItem('numero4');
+            if (num4 !== null) {
+                document.getElementById('numero4').innerHTML = num4;
+            }
+            var num5 = localStorage.getItem('numero5');
+            if (num5 !== null) {
+                document.getElementById('numero5').innerHTML = num5;
+            }
+            var num6 = localStorage.getItem('numero6');
+            if (num6 !== null) {
+                document.getElementById('numero6').innerHTML = num6;
+            }
+            var num7 = localStorage.getItem('numero7');
+            if (num7 !== null) {
+                document.getElementById('numero7').innerHTML = num7;
+            }
+            var num8 = localStorage.getItem('numero8');
+            if (num8 !== null) {
+                document.getElementById('numero8').innerHTML = num8;
+            }
+            var num9 = localStorage.getItem('numero9');
+            if (num9 !== null) {
+                document.getElementById('numero9').innerHTML = num9;             
+            }
+            var num10 = localStorage.getItem('numero10');
+            if (num10 !== null) {
+                document.getElementById('numero10').innerHTML = num10;
+            }
+            var num11 = localStorage.getItem('numero11');
+            if (num11 !== null) {
+                document.getElementById('numero11').innerHTML = num11;
+            }
+            var num12 = localStorage.getItem('numero12');
+            if (num12 !== null) {
+                document.getElementById('numero12').innerHTML = num12;
+            }
+            var num13 = localStorage.getItem('numero13');
+            if (num13 !== null) {
+                document.getElementById('numero13').innerHTML = num13;
+            }
+            var num14 = localStorage.getItem('numero14');
+            if (num14 !== null) {
+                document.getElementById('numero14').innerHTML = num14;
+            }
+            var num15 = localStorage.getItem('numero15');
+            if (num15 !== null) {
+                document.getElementById('numero15').innerHTML = num15;
+            }
+            var num16 = localStorage.getItem('numero16');
+            if (num16 !== null) {
+                document.getElementById('numero16').innerHTML = num16;
+            }
+            var num17 = localStorage.getItem('numero17');
+            if (num17 !== null) {
+                document.getElementById('numero17').innerHTML = num17;
+            }
+            var num18 = localStorage.getItem('numero18');
+            if (num18 !== null) {
+                document.getElementById('numero18').innerHTML = num18;
+            }
+            var num19 = localStorage.getItem('numero19');
+            if (num19 !== null) {
+                document.getElementById('numero19').innerHTML = num19;
+            }
+            var num19 = localStorage.getItem('numero19');
+            if (num19 !== null) {
+                document.getElementById('numero19').innerHTML = num19;
+            }
+            var num20 = localStorage.getItem('numero20');
+            if (num20 !== null) {
+                document.getElementById('numero20').innerHTML = num20;
+            }
+            var num21 = localStorage.getItem('numero21');
+            if (num21 !== null) {
+                document.getElementById('numero21').innerHTML = num21;
+            }
+            var num22 = localStorage.getItem('numero22');
+            if (num22 !== null) {
+                document.getElementById('numero22').innerHTML = num22;
+            };
+            var num23 = localStorage.getItem('numero23');
+            if (num23 !== null) {
+                document.getElementById('numero23').innerHTML = num23;
+            };
+        }
+    </script>
+</body>
+</html>
